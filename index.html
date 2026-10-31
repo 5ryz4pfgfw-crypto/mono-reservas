@@ -807,36 +807,18 @@ body.panel-mode #panelApp{display:block}
     <div class="wrap">
       <h2 id="t-con2">Consentimiento</h2>
       <p class="lead">Rellénalo desde casa antes de venir. El día de la cita entras, te sientas y empezamos.</p>
-      <form class="con-grid" id="consentForm" novalidate>
+      <div class="con-grid">
         <div class="con-card">
-          <label class="field">Nombre y apellidos<input id="cName" autocomplete="name"></label>
-          <div class="two">
-            <label class="field">DNI / NIE<input id="cDni"></label>
-            <label class="field">Fecha de nacimiento<input id="cBirth" type="date"></label>
-          </div>
-          <label class="field">Código de reserva<input id="cCode" placeholder="Si lo tienes, por ejemplo 3405AE"></label>
-          <p class="step-t" style="margin-top:6px">Marca lo que te afecte</p>
-          <label class="chk"><input type="checkbox" name="salud" value="Alergias (látex, tintas, metales)">Alergias (látex, tintas, metales)</label>
-          <label class="chk"><input type="checkbox" name="salud" value="Diabetes">Diabetes</label>
-          <label class="chk"><input type="checkbox" name="salud" value="Problemas de coagulación o anticoagulantes">Problemas de coagulación o tomo anticoagulantes</label>
-          <label class="chk"><input type="checkbox" name="salud" value="Embarazo o lactancia">Embarazo o lactancia</label>
-          <label class="chk"><input type="checkbox" name="salud" value="Problemas de piel en la zona">Problemas de piel en la zona (eccema, psoriasis, heridas)</label>
-          <label class="chk"><input type="checkbox" name="salud" value="Epilepsia o problemas de corazón">Epilepsia o problemas de corazón</label>
+          <p class="step-t">Desde tu móvil, en 2 minutos</p>
+          <p>Es el consentimiento oficial para tatuajes de Andalucía. Rellenas tus datos, lees los riesgos y cuidados, firmas con el dedo y listo: a mí me llega al momento y tú te puedes quedar una copia.</p>
+          <a class="btn" href="https://motor-consentimientos.vercel.app/firmar/mono-tattoo" target="_blank" rel="noopener" id="cGo">Firmar el consentimiento</a>
         </div>
         <div class="con-card">
-          <details class="riesgos"><summary>Leer los riesgos y cuidados</summary>
-            <p>El tatuaje atraviesa la piel. Los primeros días es normal que haya enrojecimiento, inflamación o molestias. Si no se siguen los cuidados hay riesgo de infección y, en casos poco frecuentes, puede haber reacción alérgica a los pigmentos. El resultado final depende también de cada piel y de cómo cure. Me comprometo a seguir las indicaciones de cuidado del estudio y a avisar de cualquier problema.</p>
-          </details>
-          <label class="chk"><input type="checkbox" id="cRead">He leído los riesgos y cuidados, y los entiendo.</label>
-          <label class="chk"><input type="checkbox" id="cTrue">Lo que he marcado sobre mi salud es verdad y está completo.</label>
-          <label class="chk"><input type="checkbox" id="cData">Acepto que Mono Tattoo guarde estos datos, incluidos los de salud, para gestionar mi cita.</label>
-          <p class="step-t" style="margin-top:14px">Firma aquí con el dedo</p>
-          <canvas id="sig" aria-label="Recuadro para firmar"></canvas>
-          <div class="sig-row"><span id="sigState">Sin firmar</span><button type="button" class="linkbtn" id="sigClear">Borrar firma</button></div>
-          <button class="btn" type="submit" id="cBtn">Firmar consentimiento</button>
-          <div class="err" id="cErr" aria-live="polite"></div>
+          <p class="step-t">Ten a mano</p>
+          <p>Tu DNI o NIE. Si eres menor de edad, también tiene que firmar tu madre, padre o tutor.</p>
+          <p style="margin-bottom:0">Si lo prefieres, también puedes rellenarlo en el estudio escaneando el código QR del mostrador.</p>
         </div>
-      </form>
+      </div>
     </div>
   </section>
 
@@ -881,12 +863,12 @@ body.panel-mode #panelApp{display:block}
         <details id="privacidad">
           <summary>Política de privacidad</summary>
           <p><b>Responsable:</b> Manuel Carmona Luque (Mono Tattoo), NIF 20226234B, Carretera de la Rambla, 1, 14548 Montalbán de Córdoba. Contacto: <a href="mailto:m8n810@gmail.com">m8n810@gmail.com</a> o 694 43 72 41.</p>
-          <p><b>Qué datos se recogen:</b> el apartado «Pide tu cita» solo prepara un texto en tu propio navegador y no se envía hasta que tú lo mandas por WhatsApp. Si reservas cita en «Reserva tu hueco», se guardan tu nombre, tu teléfono, tu idea y el día y la hora elegidos. Si firmas el consentimiento, se guardan tu nombre, tu DNI o NIE, tu fecha de nacimiento, las condiciones de salud que marques y tu firma. Si nos escribes por WhatsApp, trataremos también los datos y fotos que nos mandes.</p>
-          <p><b>Datos de salud:</b> solo se piden en el consentimiento, para poder tatuarte con seguridad. Se tratan con tu consentimiento explícito, que das al marcar la casilla correspondiente (artículo 9.2.a del RGPD), y solo los ve el estudio.</p>
+          <p><b>Qué datos se recogen:</b> el apartado «Pide tu cita» solo prepara un texto en tu propio navegador y no se envía hasta que tú lo mandas por WhatsApp. Si reservas cita en «Reserva tu hueco», se guardan tu nombre, tu teléfono, tu idea y el día y la hora elegidos. Si firmas el consentimiento informado, se recogen los datos que pide el modelo oficial de Andalucía: tu nombre, tu DNI o NIE, tu fecha de nacimiento, tus datos de contacto, las respuestas sobre tu salud y tu firma. Si nos escribes por WhatsApp, trataremos también los datos y fotos que nos mandes.</p>
+          <p><b>Datos de salud:</b> solo se piden en el consentimiento informado, que es obligatorio por la normativa sanitaria de Andalucía, para poder tatuarte con seguridad. Se tratan para cumplir esa obligación y con tu consentimiento explícito (artículo 9.2 del RGPD), y solo los ve el estudio.</p>
           <p><b>Para qué:</b> responder a tu consulta, darte presupuesto y gestionar tu cita.</p>
           <p><b>Base legal:</b> la aplicación de medidas precontractuales a petición tuya y, si te tatúas, la ejecución del servicio (artículo 6.1.b del RGPD), además del cumplimiento de obligaciones legales.</p>
           <p><b>Cuánto tiempo:</b> el necesario para atender tu consulta y tu cita, y después durante los plazos que exija la ley. Puedes pedir que borremos tu consentimiento cuando ya no sea necesario.</p>
-          <p><b>Destinatarios:</b> no se ceden datos a terceros salvo obligación legal. Los mensajes por WhatsApp están sujetos también a la política de privacidad de WhatsApp (Meta). La web está alojada en Vercel Inc., que puede registrar datos técnicos de la conexión, como la dirección IP, para servir la página y por seguridad. Las reservas y los consentimientos se guardan en Supabase Inc., que actúa como encargado del tratamiento con las garantías que exige el RGPD.</p>
+          <p><b>Destinatarios:</b> no se ceden datos a terceros salvo obligación legal. Los mensajes por WhatsApp están sujetos también a la política de privacidad de WhatsApp (Meta). La web está alojada en Vercel Inc., que puede registrar datos técnicos de la conexión, como la dirección IP, para servir la página y por seguridad. Las reservas se guardan en Supabase Inc. El consentimiento informado se firma a través del servicio de TachánWeb, que genera el documento y lo guarda en el Google Drive del estudio (Google LLC). Todos ellos actúan como encargados del tratamiento con las garantías que exige el RGPD.</p>
           <p><b>Tus derechos:</b> puedes pedir el acceso, la rectificación, la supresión, la oposición, la limitación del tratamiento y la portabilidad de tus datos escribiendo a <a href="mailto:m8n810@gmail.com">m8n810@gmail.com</a>. Si crees que no se han respetado tus derechos, puedes reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
         </details>
         <details id="cookies">
@@ -1282,41 +1264,14 @@ $("#bookBtn").addEventListener("click", function(){
       '<p style="font-size:16px">Para guardar tu sitio falta la señal de ' + eur(EST.senal) + '.' + (pay ? "" : " Te escribo por WhatsApp para que la pagues por Bizum.") + '</p>' +
       (pay ? '<a class="btn btn-pink" href="' + esc(pay) + '" target="_blank" rel="noopener">Pagar señal de ' + eur(EST.senal) + '</a>' : "") +
       '<a class="btn ' + (pay ? "btn-line" : "btn-pink") + '" target="_blank" rel="noopener" href="' + esc(waTo(EST.whatsapp, aviso)) + '"><svg aria-hidden="true"><use href="#i-wa"/></svg>Mandarme tus fotos por WhatsApp</a>' +
-      '<a class="btn btn-line" href="#consentimiento" data-close id="goConsent">Rellenar el consentimiento</a></div>');
-    $("#goConsent").addEventListener("click", function(){ $("#cCode").value = codigo; if (!$("#cName").value) $("#cName").value = nombre; });
+      '<a class="btn btn-line" href="https://motor-consentimientos.vercel.app/firmar/mono-tattoo" target="_blank" rel="noopener">Rellenar el consentimiento</a></div>');
     booking.hora = null; booking.pref = null; $$("#bPref button").forEach(function(x){ x.setAttribute("aria-pressed", "false"); }); $("#bIdea").value = "";
     loadBusy().then(function(){ renderDays(); renderSlots(); renderSummary(); });
   });
 });
 
-/* ===== CONSENTIMIENTO ===== */
-var cv = $("#sig"), ctx = cv.getContext("2d"), signed = false, drawing = false;
-function sizeSig(){ var r = cv.getBoundingClientRect(), dpr = window.devicePixelRatio || 1; cv.width = r.width * dpr; cv.height = r.height * dpr; ctx.setTransform(dpr,0,0,dpr,0,0); ctx.lineWidth = 2.6; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.strokeStyle = "#000"; signed = false; $("#sigState").textContent = "Sin firmar"; }
-sizeSig(); window.addEventListener("resize", function(){ if (!signed) sizeSig(); });
-function pt(e){ var r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; }
-cv.addEventListener("pointerdown", function(e){ drawing = true; cv.setPointerCapture(e.pointerId); ctx.beginPath(); var p = pt(e); ctx.moveTo(p[0], p[1]); });
-cv.addEventListener("pointermove", function(e){ if (!drawing) return; var p = pt(e); ctx.lineTo(p[0], p[1]); ctx.stroke(); if (!signed) { signed = true; $("#sigState").textContent = "Firmado"; } });
-["pointerup","pointercancel"].forEach(function(t){ cv.addEventListener(t, function(){ drawing = false; }); });
-$("#sigClear").addEventListener("click", sizeSig);
-function firmaPng(){ var c = document.createElement("canvas"); c.width = 600; c.height = 200; var x = c.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0,0,600,200); x.drawImage(cv, 0, 0, 600, 200); return c.toDataURL("image/png"); }
-var qCode = new URLSearchParams(location.search).get("codigo"); if (qCode) $("#cCode").value = qCode;
-$("#consentForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  var name = $("#cName").value.trim(), dni = $("#cDni").value.trim(), birth = $("#cBirth").value, err = "";
-  if (name.length < 3) err = "Escribe tu nombre y apellidos.";
-  else if (dni.length < 8) err = "Escribe tu DNI o NIE completo.";
-  else if (!birth) err = "Pon tu fecha de nacimiento.";
-  else if (!($("#cRead").checked && $("#cTrue").checked && $("#cData").checked)) err = "Marca las tres casillas.";
-  else if (!signed) err = "Firma en el recuadro antes de enviar.";
-  $("#cErr").textContent = err; if (err) return;
-  var btn = $("#cBtn"); btn.disabled = true; btn.textContent = "Enviando…";
-  var salud = $$('input[name="salud"]:checked').map(function(i){ return i.value; });
-  db.rpc("firmar_consentimiento", {p_slug: CFG.estudio, p_nombre: name, p_dni: dni, p_nacimiento: birth, p_salud: salud, p_firma: firmaPng(), p_cita_codigo: $("#cCode").value.trim() || null}).then(function(r){
-    btn.disabled = false; btn.textContent = "Firmar consentimiento";
-    if (r.error) { $("#cErr").textContent = r.error.message; return; }
-    $("#consentForm").innerHTML = '<div class="con-card done" style="grid-column:1/-1"><div class="ok">✓</div><p class="step-t">Consentimiento firmado</p><p>' + esc(name) + ', ya lo tengo. El día de la cita trae tu DNI.</p></div>';
-  });
-});
+/* ===== CONSENTIMIENTO: se firma en el motor de consentimientos (TachánWeb) ===== */
+var FIRMA_URL = "https://motor-consentimientos.vercel.app/firmar/mono-tattoo";
 
 /* ===== PANEL DEL ESTUDIO ===== */
 var P = {tab:"citas", vista:"proximas", citas:[], arts:[]};
@@ -1414,12 +1369,12 @@ function msgCita(tipo, c){
   var pago = EST.enlace_pago ? "\nPuedes pagarla aquí: " + EST.enlace_pago + (EST.enlace_pago.indexOf("?") > -1 ? "&" : "?") + "client_reference_id=" + c.codigo : "\nPuedes hacerla por Bizum a este mismo número.";
   var cuando = c.fecha ? cuandoTxt(c) : "";
   var hora = c.hora_exacta ? "" : " Te espero a las [PON LA HORA].";
-  var consent = "\n\nAntes de venir, rellena el consentimiento aquí (son 2 minutos): " + web + "?codigo=" + c.codigo + "#consentimiento";
+  var consent = "\n\nAntes de venir, rellena el consentimiento aquí (son 2 minutos): " + FIRMA_URL;
   return {
     hablar: "¡Hola, " + nom + "! Soy Manuel, de Mono Tattoo. He visto tu idea: «" + (c.idea || "") + "». ¿Me mandas foto de referencia y de la zona donde lo quieres? Así te digo cuánto tiempo lleva y te busco hueco.",
     confirmar: "¡Hola, " + nom + "! Soy Manuel, de Mono Tattoo. Tu cita está confirmada: " + cuando + "." + hora + " Tu código es " + c.codigo + "." + consent,
     senal: "¡Hola, " + nom + "! Soy Manuel, de Mono Tattoo. Para guardarte el sitio falta la señal de " + EST.senal + " €, que se descuenta del precio final." + pago,
-    recordatorio: "¡Hola, " + nom + "! Te recuerdo tu cita en Mono Tattoo: " + cuando + ".\nVen comido, hidratado y sin alcohol las 24 horas anteriores, y trae tu DNI.\nSi no has rellenado el consentimiento: " + web + "?codigo=" + c.codigo + "#consentimiento\n¡Nos vemos!",
+    recordatorio: "¡Hola, " + nom + "! Te recuerdo tu cita en Mono Tattoo: " + cuando + ".\nVen comido, hidratado y sin alcohol las 24 horas anteriores, y trae tu DNI.\nSi no has rellenado el consentimiento: " + FIRMA_URL + "\n¡Nos vemos!",
     cuidados: "¡Gracias por venir, " + nom + "! Para que cure perfecto: lávalo con agua tibia y jabón neutro 2 o 3 veces al día, sécalo a toquecitos, crema en capa muy fina, nada de sol, piscina ni mar hasta que cure, y no te rasques aunque pique. Cualquier duda, escríbeme por aquí."
   }[tipo];
 }
